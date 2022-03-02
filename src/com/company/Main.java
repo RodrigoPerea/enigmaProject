@@ -6,25 +6,47 @@ public class Main {
 
 public void runProgram(){
     System.out.println("enter the tekst you whant to decrypt");
-    stringToNom();
-userShiftValue();
+    int shiftValue = userShiftValue();
+    String enkryptedSting =  stringToNom();
+
+    System.out.println(enkryptedSting);
+
 
 }
 
 
-    public int stringToNom(){
+
+    public String stringToNom(){
         String fromUser = userInputTekst();
+        String enkryptedString="";
         //int shiftValue=userShiftValue();
         char[] array = fromUser.toCharArray();
         for (char calculation : array) {
            int num = letterToNumber(calculation);
+           enkryptedString+=num;
             //System.out.print(num);
            // int netLetterNumber= shift(num,shiftValue);
             //char letter = numberToLetter(netLetterNumber);
 
         }
+        return enkryptedString;
+    }
+
+
+
+
+    public int stringToNom(int shiftValue){
+    String shiftValueString = ""+shiftValue;
+        char[] array = shiftValueString.toCharArray();
+        for (char calculation : array) {
+            int num = letterToNumber(calculation);
+            return num;
+        }
         return 0;
     }
+
+
+
 
    // public String numToString(){
     //shift();
@@ -33,10 +55,11 @@ userShiftValue();
 
 
 public int letterToNumber(char calculation) {
-    int unicode = (int) calculation;
+    char unicode =  calculation;
     int startPositionUniCode = 96;
     if (unicode <= 122 & unicode >= 97) {
         int forPrint = unicode - startPositionUniCode;
+        //System.out.println(forPrint);
         return forPrint;
     }
     return 0;
@@ -52,15 +75,18 @@ public int letterToNumber(char calculation) {
     }
 
 public int shift(int numberFromLetter, int shiftValue){
-        shiftValue = numberFromLetter+ shiftValue;
-    if (numberFromLetter>29){
-        numberFromLetter= 1;
-        return numberFromLetter;
+        int shift2 = stringToNom(numberFromLetter)+ shiftValue;
+    if (shift2>29){
+        shift2= shift2-30;
+        //System.out.println(shift2);
+        //return shift2;
         }
-    return shiftValue;
+    return shift2;
 
 
 }
+
+
     public String userInputTekst(){
         Scanner key = new Scanner(System.in);
         String newUserInput = key.nextLine();
