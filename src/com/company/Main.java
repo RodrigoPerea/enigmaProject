@@ -102,7 +102,7 @@ public class Main {
     System.out.println(blue + "B) Vigenère" + fReset);
     System.out.println(blue + "C) Number" + fReset);
     Scanner userKey = new Scanner(System.in);
-    String choose = userKey.next();
+    String choose = userKey.nextLine();
     if (choose.equals("A") || choose.equals("a")) {
       cesarMenu();
     } else {
@@ -112,10 +112,10 @@ public class Main {
   }
 
   public void cesarMenu() {
-    System.out.println(blue + "A) Dekrypt" + fReset);
-    System.out.println(blue + "B) Enkrypt" + fReset);
+    System.out.println(blue + "A) Enkrypt" + fReset);
+    System.out.println(blue + "B) Dekrypt" + fReset);
     Scanner userKey = new Scanner(System.in);
-    String choose = userKey.next();
+    String choose = userKey.nextLine();
     if (choose.equals("A") || choose.equals("a")) {
       runProgram();
     } else {
@@ -125,8 +125,9 @@ public class Main {
   }
 
   public void runProgram() {
-    System.out.println("enter the tekst you whant to decrypt");
+    System.out.println(yellow+"Enter your shift-value"+fReset);
     int shiftValue = userShiftValue();
+    //System.out.println("enter teskst");
     String enkryptedSting = stringToNom();
     enkryptedSting = String.valueOf(shift(shiftValue));
 
@@ -185,7 +186,7 @@ public class Main {
     int shift2 = stringToNom(numberFromLetter) + userShiftValue();
     if (shift2 > 29) {
       shift2 = shift2 - 29;
-      System.out.println(shift2);
+      //System.out.println(shift2);
       //return shift2;
     }
     return shift2;
@@ -195,6 +196,7 @@ public class Main {
 
 
   public String userInputTekst() {
+    System.out.println(yellow+"Enter tekst"+fReset);
     Scanner key = new Scanner(System.in);
     String newUserInput = key.nextLine();
     return newUserInput;
