@@ -201,27 +201,6 @@ public class Main {
     String newUserInput = key.nextLine();
     return newUserInput;
   }
-/*
-    public char[] orgAlfabet(){
-        char[] alphabet = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','Æ','Ø','Å'};
-
-        return alphabet;
-
-    }
-
-    public char[] comperaToOrgAlfa(char[] compere){
-        compere = orgAlfabet();
-        for (int i = 0; i < compere.length; i++);
-
-        return compere;
-
-    }
-
-
- */
-
-
-
 
   public static void main(String[] args) {
     // write your code here
