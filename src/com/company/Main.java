@@ -3,9 +3,9 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-  public String rød = "\u001B[31m";
+  public String red = "\u001B[31m";
   public String fReset = "\u001B[0m";
-  public String grøn = "\u001B[32m"; //til færrdig tekst
+  public String green = "\u001B[32m"; //til færrdig tekst
   public String blue = "\u001B[34m";
   public String yellow = "\u001B[33m";
 /*
@@ -106,7 +106,7 @@ public class Main {
     if (choose.equals("A") || choose.equals("a")) {
       cesarMenu();
     } else {
-      System.out.println(rød + "Under construction. Choose somthing else!" + fReset);
+      System.out.println(red + "Under construction. Choose somthing else!" + fReset);
       menue();
     }
   }
@@ -119,7 +119,7 @@ public class Main {
     if (choose.equals("A") || choose.equals("a")) {
       runProgram();
     } else {
-      System.out.println(rød + "Under construction. Choose somthing else!" + fReset);
+      System.out.println(red + "Under construction. Choose somthing else!" + fReset);
       cesarMenu();
     }
   }
@@ -200,7 +200,6 @@ public class Main {
   }
 
   public static void main(String[] args) {
-    // write your code here
     System.out.println("Welcome to MyKrypt.");
     Main app = new Main();
     app.menue();
