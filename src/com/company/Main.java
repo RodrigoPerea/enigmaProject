@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
   public String rød = "\u001B[31m";
   public String fReset = "\u001B[0m";
-  public String grøn = "\u001B[32m";
+  public String grøn = "\u001B[32m"; //til færrdig tekst
   public String blue = "\u001B[34m";
   public String yellow = "\u001B[33m";
 /*
