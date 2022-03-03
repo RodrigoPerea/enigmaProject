@@ -173,9 +173,6 @@ public class Main {
     return 0;
   }
 
-  //public char numberToLetter(int number){
-  //  return '';
-//}
   public int userShiftValue() {
     Scanner key = new Scanner(System.in);
     int userinput = key.nextInt();
